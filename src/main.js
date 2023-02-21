@@ -2,6 +2,7 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import LoginComponent from './components/LoginComponent';
 import MainComponent from './components/MainComponent';
+import ProductItem from './components/ProductItem';
 
 import router from './router/index.js';
 
@@ -22,4 +23,5 @@ app.use(router);
 app.use(vuetify);
 app.component('LoginComponent', LoginComponent);
 app.component('MainComponent', MainComponent);
+app.component('ProductItem', ProductItem);
 app.mount('#app')

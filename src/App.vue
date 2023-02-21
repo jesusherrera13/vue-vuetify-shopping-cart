@@ -19,8 +19,6 @@ export default {
     }
   },
   created() {
-    // let request = window.indexedDB.open("notes_db", 1);
-    // console.log(request);
     if(localStorage.getItem('user')) {
       this.user = JSON.parse(localStorage.getItem('user'));
       this.authenticated = true;
@@ -33,6 +31,7 @@ export default {
       localStorage.setItem('user', JSON.stringify(user));
     },
     logout() {
+      this.$router.push('/');
       this.user = {};
       this.authenticated = false;
       localStorage.clear();

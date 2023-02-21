@@ -81,6 +81,7 @@
         <v-main style="min-height: 300px;">
           <router-view 
             :cart="cart"
+            :user="user"
             @addToCart="addToCart" 
             @deleteProduct="deleteProduct" 
           >

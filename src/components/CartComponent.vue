@@ -42,12 +42,6 @@
                     @click="$emit('deleteProduct', product)"
                 >
                 </v-btn>
-
-
-
-
-
-
             </td>
         </tr>
         </tbody>
@@ -63,16 +57,10 @@ export default {
             dialog: false
         }
     },
-    created() {
-        console.log(this.cart)
-    },
     methods: {
         calculate(product) {
             product.total = parseFloat((product.quantity * product.price).toFixed(2));
-        },
-        // deleteProduct(product) {
-        //     this.$emit('deleteProduct', product);
-        // }
+        }
     }
 }
 </script>

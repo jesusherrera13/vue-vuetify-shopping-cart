@@ -1,32 +1,40 @@
 <template>
     <v-container fill-height>
-      <v-row class="justify-center align-center">
-        <v-col cols="12" sm="8" xs="8" md="6" lg="4">
-            <v-card>
-                <v-card-title>
-                    Login
-                </v-card-title>
-                <v-card-text>
-                    <v-form fast-fail @submit.prevent="login">
-                        <v-text-field
-                            v-model="user.email"
-                            label="Email"
-                            type="email"
-                        ></v-text-field>
+        <v-sheet class="pa-12" rounded>
+            <v-card class="mx-auto px-6 py-8" max-width="344">
+                <v-form
+                    @submit.prevent="login"
+                >
+                    <v-text-field
+                        v-model="user.email"
+                        class="mb-2"
+                        clearable
+                        label="Email"
+                    ></v-text-field>
 
-                        <v-text-field
-                            v-model="user.password"
-                            label="Password"
-                            type="password"
-                        ></v-text-field>
+                    <v-text-field
+                        v-model="user.password"
+                        clearable
+                        label="Password"
+                        placeholder="Enter your password"
+                        type="password"
+                    ></v-text-field>
 
-                        <v-btn type="submit" block class="mt-2">Submit</v-btn>
-                    </v-form>
-                </v-card-text>
-            </v-card> 
-        </v-col>
-      </v-row>
-  </v-container>
+                    <br>
+
+                    <v-btn
+                        block
+                        color="success"
+                        size="large"
+                        type="submit"
+                        variant="elevated"
+                    >
+                    Sign In
+                    </v-btn>
+                </v-form>
+            </v-card>
+        </v-sheet>
+    </v-container>
 </template>
 <script>
 export default {
