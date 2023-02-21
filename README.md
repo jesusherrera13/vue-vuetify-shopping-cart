@@ -1,4 +1,4 @@
-# product-and-cart
+# vue-vuetify-shopping-cart
 
 ## Project setup
 ```
